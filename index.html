@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css" />
+    <title>CRUD PHP | Data Siswa</title>
+  </head>
+  <body>
+<div class="container">
+      <h1>Data Siswa</h1>
+      <figure>
+        <blockquote class="blockquote">
+          <p>Berisi data yang telah disimpan di database</p>
+        </blockquote>
+
+        <figcaption class="blockquote-footer">CRUD <cite class="Source Title">Create Read Update Delete</cite></figcaption>
+      </figure>
+
+      <button type="button" class="btn btn-primary mb-3">
+        <i class="fa fa-plus"></i>
+        Tambah Data
+      </button>
+      <div class="table-responsive">
+        <table class="table align-middle table-bordered table-hover">
+          <thead>
+            <tr>
+              <th><center>No.</center></th>
+              <th>NISN</th>
+              <th>Nama Siswa</th>
+              <th>Jenis Kelamin</th>
+              <th>Foto Siswa</th>
+              <th>Alamat</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><center>1.</center></td>
+              <td>112233</td>
+              <td>Aji Kurniawan</td>
+              <td>Laki-laki</td>
+              <td>
+                <img src="img/img1.jpg" alt="" style="width: 100px" />
+              </td>
+              <td>Prabumulih</td>
+              <td>
+                <button type="button" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i> ubah</button>
+                <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> hapus</button>
+              </td>
+            </tr>
+            <tr>
+              <td><center>2.</center></td>
+              <td>122233</td>
+              <td>Indah Mayasari</td>
+              <td>Perempuan</td>
+              <td>
+                <img src="img/img2.jpg" alt="" style="width: 100px" />
+              </td>
+              <td>Prabumulih Timur</td>
+              <td>
+                <button type="button" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i> ubah</button>
+                <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> hapus</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
