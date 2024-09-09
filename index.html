@@ -9,6 +9,12 @@
     <!-- fontawesome -->
     <script src="fontawesome/js/all.js"></script>
     <title>CRUD PHP | Data Siswa</title>
+      <style>
+      body { 
+            padding-top: 65px; 
+      }
+      
+      </style>
   </head>
   <body>
       <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top ">
@@ -22,15 +28,18 @@
                   <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav mx-auto">
                               <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                    <a class="nav-link active" aria-current="page" href="#">Siswa</a>
                               </li>
                               <li class="nav-item">
-                                    <a class="nav-link" href="#">Features</a>
+                                    <a class="nav-link" href="#">Dosen</a>
                               </li>
                               <li class="nav-item">
-                                    <a class="nav-link" href="#">Pricing</a>
+                                    <a class="nav-link" href="#">Mata Kuliah</a>
                               </li>
-                              <li class="nav-item dropdown">
+                              <li class="nav-item"></li>
+                                    <a class="nav-link" href="#">Logout</a>
+                              </li>
+                              <!-- <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Dropdown link
                                     </a>
@@ -39,14 +48,13 @@
                                           <li><a class="dropdown-item" href="#">Another action</a></li>
                                           <li><a class="dropdown-item" href="#">Something else here</a></li>
                                     </ul>
-                              </li>
+                              </li> -->
                         </ul>
                   </div>
             </div>
       </nav>
 
 <div class="container">
-      <br>
       <h1>Data Siswa</h1>
       <figure>
         <blockquote class="blockquote">
@@ -56,46 +64,16 @@
         <figcaption class="blockquote-footer">CRUD <cite class="Source Title">Create Read Update Delete</cite></figcaption>
       </figure>
 
-
-<!--       <button type="button" class="btn btn-primary mb-3">
-        <i class="fa fa-plus"></i>
-        Tambah Data
-      </button> -->
       <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
             <i class="fa fa-plus"></i> Tambah Data
-      </button>
+      </button> -->
+
+      <a href="kelola.html" type="button" class="btn btn-primary mb-3">
+            <i class="fa fa-plus"></i>
+            Tambah Data
+      </a>
     
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <form>
-                  <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                  </div>
-                  <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
-                  </div>
-                  
-                  <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
-                </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-      </div>
-    </div>
       <div class="table-responsive">
         <table class="table align-middle table-bordered table-hover">
           <thead>
@@ -142,24 +120,37 @@
         </table>
       </div>
 
+      
+
       <!-- Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable">
-                  <div class="modal-content">
-                        <div class="modal-header">
-                              <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                              ...
-                        </div>
-                        <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
+    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                   </div>
-            </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+            
+                </form>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
       </div>
+    </div> -->
 
   </body>
 </html>
