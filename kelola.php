@@ -28,7 +28,7 @@
               <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav mx-auto">
                           <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.html">Siswa</a>
+                                <a class="nav-link active" aria-current="page" href="index.php">Siswa</a>
                           </li>
                           <li class="nav-item">
                                 <a class="nav-link" href="#">Dosen</a>
@@ -54,6 +54,9 @@
   </nav>
 
     <div class="container">
+
+    <form method="POST" action="proses.php">
+
       <div class="mb-3 row">
         <label for="nisn" class="col-sm-2 col-form-label">NISN</label>
         <div class="col-sm-10">
@@ -93,12 +96,27 @@
         </div>
       </div>
 
-      <div class="mb-3 row mt-4">
+      <!-- <div class="mb-3 row mt-4">
         <div class="col">
           <button type="button" class="btn btn-primary"><i class="fa fa-save" aria-hidden="true"></i> Tambahkan</button>
-          <a href="index.html" type="button" class="btn btn-danger"><i class="fa fa-reply" aria-hidden="true"></i> Batal</a>
+          <a href="index.php" type="button" class="btn btn-danger"><i class="fa fa-reply" aria-hidden="true"></i> Batal</a>
+        </div>
+      </div> -->
+      <div class="mb-3 row mt-4">
+        <div class="col">
+
+          <?php if (isset($_GET['ubah'])) { ?>
+            <button type="submit" name="aksi" value="edit" class="btn btn-primary"><i class="fa fa-save" aria-hidden="true"></i> Simpan Perubahan</button>
+          <?php
+            } else {
+          ?>
+          <button type="submit" name="aksi" value="add" class="btn btn-primary"><i class="fa fa-save" aria-hidden="true"></i> Tambahkan</button>
+          <?php } ?>
+
+          <a href="index.php" type="button" class="btn btn-danger"><i class="fa fa-reply" aria-hidden="true"></i> Batal</a>
         </div>
       </div>
+    </form>
     </div>
   </body>
 </html>
