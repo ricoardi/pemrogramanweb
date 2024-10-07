@@ -56,8 +56,41 @@
     <div class="container">
 
     <form method="POST" action="proses.php">
-
-      <div class="mb-3 row">
+    <div class="mb-3 row">
+      <label for="nisn" class="col-sm-2 col-formlabel">NISN</label>
+      <div class="col-sm-10">
+        <input type="text" name="nisn" class="form-control" id="nisn" placeholder="Ex: 112233" />
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <label for="nama" class="col-sm-2 col-form-label">Nama Siswa</label>
+      <div class="col-sm-10">
+        <input type="text" name="nama_siswa" class="form-control" id="nama" placeholder="Ex: Alexander" />
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <label for="jkel" class="col-sm-2 col-form-label">Jenis Kelamin</label>
+      <div class="col-sm-10">
+        <select name="jenis_kelamin" id="jkel" class="form-select">
+        <option selected>Jenis Kelamin</option>
+        <option value="Laki-laki">Laki-laki</option>
+        <option value="Perempuan">Perempuan</option>
+        </select>
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <label for="foto" class="col-sm-2 col-form-label">Foto Siswa</label>
+      <div class="col-sm-10">
+        <input type="file" name="foto" class="form-control" id="foto" />
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <label for="alamat" class="col-sm-2 col-formlabel">Alamat Siswa</label>
+      <div class="col-sm-10">
+        <textarea name="alamat" class="form-control" id="alamat" rows="3" placeholder="Ex: Jln. Sudirman..."></textarea>
+      </div>
+    </div>
+      <!-- <div class="mb-3 row">
         <label for="nisn" class="col-sm-2 col-form-label">NISN</label>
         <div class="col-sm-10">
           <input type="text" class="form-control" id="nisn" placeholder="Ex: 112233" />
@@ -90,11 +123,11 @@
       </div>
 
       <div class="mb-3 row">
-        <label for="alamat" class="col-sm-2 col-form-label">Nama Siswa</label>
+        <label for="alamat" class="col-sm-2 col-form-label">Alamat Siswa</label>
         <div class="col-sm-10">
           <textarea class="form-control" id="alamat" rows="3" placeholder="Ex: Jln. Sudirman..."></textarea>
         </div>
-      </div>
+      </div> -->
 
       <!-- <div class="mb-3 row mt-4">
         <div class="col">

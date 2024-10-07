@@ -91,21 +91,22 @@ $no = 1;
                               while ($result = mysqli_fetch_assoc($sql)) {
                         ?>
                               <tr>
-                              <td>
-                              <center><?php echo $no++; ?></center>
-                              </td>
-                              <td><?php echo $result['nisn']; ?></td>
-                              <td><?php echo $result['nama_siswa']; ?></td>
-                              <td><?php echo $result['jenis_kelamin']; ?></td>
-                              <td>
-                              <img src="img/<?php echo $result['foto_siswa']; ?>" alt="" style="width: 100px" />
-                              </td>
-                              <td><?php echo $result['alamat']; ?></td>
-                              <td>
-                              <a href="kelola.php?ubah=<?php echo $result['id_siswa']; ?>" type="button" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i></a>
+                                    <td>
+                                    <center><?php echo $no++; ?></center>
+                                    </td>
+                                    <td><?php echo $result['nisn']; ?></td>
+                                    <td><?php echo $result['nama_siswa']; ?></td>
+                                    <td><?php echo $result['jenis_kelamin']; ?></td>
+                                    <td>
+                                    <img src="img/<?php echo $result['foto_siswa']; ?>" alt="" style="width: 100px" />
+                                    </td>
+                                    <td><?php echo $result['alamat']; ?></td>
+                                    <td>
+                                    <a href="kelola.php?ubah=<?php echo $result['id_siswa']; ?>" type="button" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i></a>
 
-                              <a href="proses.php?hapus=<?php echo $result['id_siswa']; ?>" type="button" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
-                              </td>
+                                    <!-- <a href="proses.php?hapus=< ?php echo $result['id_siswa']; ?>" type="button" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a> -->
+                                    <a href="proses.php?hapus=<?php echo $result['id_siswa']; ?>" type="button" class="btn btn-danger btn-sm" onClick="return confirm('Apakah anda yakin ingin menghapus data tersebut?')"><i class="fa fa-trash"></i></a>
+                                    </td>
                               </tr>
                         <?php
                               }
